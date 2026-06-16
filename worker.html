@@ -16,8 +16,8 @@
   --slate:#4A5568;
   --slate-light:#718096;
   --white:#FFFFFF;
-  --warm-white:#F8F9FA;
   --fog:#F0F3F4;
+  --warm-white:#F8F9FA;
   --border:rgba(0,0,0,0.08);
   --border-teal:rgba(58,156,168,0.22);
 }
@@ -28,46 +28,47 @@ a{color:inherit;text-decoration:none}
 h1,h2,h3,h4{text-wrap:balance;letter-spacing:-0.01em}
 p,li{text-wrap:pretty;overflow-wrap:break-word;hanging-punctuation:force-end last}
 
-/* ─── SCROLL PROGRESS ─── */
+/* SCROLL PROGRESS */
 .scroll-progress{position:fixed;top:0;left:0;height:2px;background:var(--teal);z-index:500;width:0;pointer-events:none;transition:width 0.08s linear}
 
-/* ─── NAV ─── */
+/* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:400;background:rgba(255,255,255,0.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);transition:box-shadow 0.3s}
 nav.scrolled{box-shadow:0 2px 20px rgba(26,32,44,0.07)}
 .nav-inner{max-width:1160px;margin:0 auto;padding:0 40px;height:62px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-.nav-left{display:flex;align-items:center;gap:16px}
-.nav-logo{font-family:'Outfit',sans-serif;font-weight:700;font-size:1rem;letter-spacing:3px;color:var(--navy);white-space:nowrap}
+.nav-left{display:flex;align-items:center;gap:14px}
+.nav-logo{font-family:'Outfit',sans-serif;font-weight:700;font-size:1rem;letter-spacing:3px;color:var(--navy)}
 .nav-logo small{font-family:'Noto Sans JP',sans-serif;font-size:0.56rem;font-weight:300;color:var(--slate-light);letter-spacing:1px;display:block;margin-top:-2px}
 .nav-badge{font-family:'Outfit',sans-serif;font-size:0.58rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;background:var(--teal-ghost);color:var(--teal-deep);border:1px solid var(--border-teal);padding:3px 10px;border-radius:3px;white-space:nowrap}
-.nav-right{display:flex;align-items:center;gap:20px}
+.nav-right{display:flex;align-items:center;gap:18px}
 .nav-link{font-size:0.78rem;color:var(--slate);transition:color 0.2s;white-space:nowrap}
 .nav-link:hover{color:var(--navy)}
 .nav-cta{background:var(--teal-deep);color:#fff;padding:9px 22px;border-radius:5px;font-family:'Outfit',sans-serif;font-size:0.78rem;font-weight:600;letter-spacing:0.5px;transition:all 0.2s;white-space:nowrap}
 .nav-cta:hover{background:var(--teal-dark);transform:translateY(-1px)}
-.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;border:none;background:none;padding:6px;margin-left:4px}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;border:none;background:none;padding:6px}
 .hamburger span{width:22px;height:1.5px;background:var(--navy);display:block;transition:all 0.28s;border-radius:1px}
 .hamburger.open span:nth-child(1){transform:rotate(45deg) translate(4px,5px)}
 .hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
 .hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(4px,-5px)}
 @media(max-width:768px){.nav-badge,.nav-link{display:none}.hamburger{display:flex}}
 
-/* ─── HERO ─── */
+/* HERO */
 .hero{display:grid;grid-template-columns:1fr 1fr;min-height:100vh;padding-top:62px}
 .hero-text{padding:80px 56px 80px 40px;max-width:640px;margin-left:auto;display:flex;flex-direction:column;justify-content:center}
 .hero-eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:'Outfit',sans-serif;font-size:0.62rem;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--teal-deep);margin-bottom:28px}
 .hero-eyebrow::before{content:'';width:28px;height:1.5px;background:var(--teal);flex-shrink:0}
-.hero h1{font-family:'Noto Sans JP',sans-serif;font-size:clamp(2rem,3.4vw,2.9rem);font-weight:700;color:var(--navy);line-height:1.42;letter-spacing:-0.02em;margin-bottom:24px}
+.hero h1{font-family:'Noto Sans JP',sans-serif;font-size:clamp(1.9rem,3.2vw,2.75rem);font-weight:700;color:var(--navy);line-height:1.5;letter-spacing:-0.02em;margin-bottom:24px}
 .hero h1 em{font-style:normal;color:var(--teal)}
-.hero-lead{font-size:0.92rem;color:var(--slate);line-height:2.15;margin-bottom:12px;font-weight:300}
-.hero-note{font-size:0.8rem;color:var(--teal-deep);font-weight:500;margin-bottom:36px;padding:12px 18px;background:var(--teal-ghost);border-left:3px solid var(--teal);line-height:1.85;border-radius:0 6px 6px 0}
-.hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:40px}
+.hero h1 small{display:block;font-size:0.62em;font-weight:400;color:var(--slate-light);letter-spacing:0.02em;margin-top:6px;line-height:1.7}
+.hero-lead{font-size:0.92rem;color:var(--slate);line-height:2.15;margin-bottom:28px;font-weight:300}
+.hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px}
+.hero-tag{font-size:0.72rem;color:var(--teal-deep);background:var(--teal-ghost);border:1px solid var(--border-teal);padding:4px 12px;border-radius:3px;font-weight:500}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:36px}
 .btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--teal-deep);color:#fff;padding:14px 28px;font-family:'Outfit',sans-serif;font-size:0.88rem;font-weight:600;letter-spacing:0.5px;border-radius:6px;transition:all 0.2s}
 .btn-primary:hover{background:var(--teal-dark);transform:translateY(-2px);box-shadow:0 8px 28px rgba(27,107,118,0.28)}
 .btn-secondary{display:inline-flex;align-items:center;gap:10px;background:transparent;color:var(--navy);padding:14px 26px;font-size:0.88rem;font-weight:400;border:1px solid var(--border);border-radius:6px;transition:all 0.2s}
 .btn-secondary:hover{border-color:var(--navy);background:var(--fog)}
-.hero-checks{display:flex;flex-wrap:wrap;gap:16px;padding-top:20px;border-top:1px solid var(--border)}
-.hero-check{font-size:0.75rem;color:var(--slate);display:flex;align-items:center;gap:6px}
-.hero-check::before{content:'✓';color:var(--teal);font-weight:700;font-size:0.72rem}
+.hero-note{font-size:0.75rem;color:var(--slate-light);line-height:1.8}
+.hero-note a{color:var(--teal-deep);text-decoration:underline;text-underline-offset:3px}
 
 /* HERO VISUAL */
 .hero-visual{position:relative;background:linear-gradient(148deg,#EAF5F7 0%,#C5DDE3 28%,#9ECAD5 52%,#72B5C6 73%,#3E9DB0 90%,#1B6B76 100%);overflow:hidden;display:flex;align-items:center;justify-content:center}
@@ -82,11 +83,11 @@ nav.scrolled{box-shadow:0 2px 20px rgba(26,32,44,0.07)}
 .island-kanji{font-family:'Noto Sans JP',sans-serif;font-size:clamp(3rem,6vw,5rem);font-weight:900;color:rgba(13,74,82,0.16);letter-spacing:14px;line-height:1;margin-bottom:18px}
 .island-desc{font-size:0.72rem;color:rgba(13,74,82,0.45);letter-spacing:1px;margin-bottom:28px}
 .island-stats{display:flex;flex-direction:column;gap:10px;align-items:center}
-.island-stat{background:rgba(255,255,255,0.58);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.72);border-radius:8px;padding:10px 22px;font-size:0.75rem;color:var(--teal-dark);font-weight:500;letter-spacing:0.3px;white-space:nowrap}
-.island-stat strong{font-family:'Outfit',sans-serif;font-size:1.05rem;font-weight:800;margin-right:4px;color:var(--teal-dark)}
+.island-stat{background:rgba(255,255,255,0.58);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.72);border-radius:8px;padding:10px 22px;font-size:0.75rem;color:var(--teal-dark);font-weight:500;white-space:nowrap}
+.island-stat strong{font-family:'Outfit',sans-serif;font-size:1.05rem;font-weight:800;margin-right:4px}
 @media(max-width:900px){.hero{grid-template-columns:1fr;min-height:auto}.hero-text{padding:80px 32px 56px;max-width:100%;margin:0}.hero-visual{min-height:340px}}
 
-/* ─── COMMON SECTION ─── */
+/* SECTION COMMON */
 .sec-wrap{padding:100px 40px}
 .sec-inner{max-width:1160px;margin:0 auto}
 .chap-label{font-family:'Outfit',sans-serif;font-size:0.56rem;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--slate-light);display:block;margin-bottom:6px}
@@ -94,63 +95,25 @@ nav.scrolled{box-shadow:0 2px 20px rgba(26,32,44,0.07)}
 .sec-title{font-family:'Noto Sans JP',sans-serif;font-size:clamp(1.45rem,2.4vw,1.95rem);font-weight:700;color:var(--navy);line-height:1.48}
 .sec-lead{font-size:0.9rem;color:var(--slate);line-height:2.1;margin-top:16px;font-weight:300}
 
-/* ─── REASONS ─── */
-.reasons{background:var(--fog)}
-.reasons-head{text-align:center;margin-bottom:60px}
-.reasons-head .sec-lead{max-width:580px;margin-left:auto;margin-right:auto}
-.reasons-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
-.reason-card{background:var(--white);padding:48px 40px;transition:background 0.25s}
-.reason-card:hover{background:#FDFFFE}
-.reason-num{font-family:'Outfit',sans-serif;font-size:3.2rem;font-weight:900;color:var(--teal-pale);line-height:1;margin-bottom:20px;letter-spacing:-2px;display:block}
-.reason-icon{width:44px;height:44px;background:var(--teal-ghost);border-radius:10px;border:1px solid var(--border-teal);display:flex;align-items:center;justify-content:center;font-size:1.15rem;margin-bottom:18px}
-.reason-card h3{font-family:'Noto Sans JP',sans-serif;font-size:1.02rem;font-weight:700;color:var(--navy);margin-bottom:12px;line-height:1.55}
-.reason-card p{font-size:0.83rem;color:var(--slate);line-height:2.05}
-.reason-pill{display:inline-flex;align-items:center;gap:5px;font-family:'Outfit',sans-serif;font-size:0.58rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--teal-deep);background:var(--teal-ghost);border:1px solid var(--border-teal);padding:3px 10px;border-radius:3px;margin-top:18px}
-@media(max-width:800px){.reasons-grid{grid-template-columns:1fr}.reason-card{padding:36px 28px}}
+/* PAIN POINTS */
+.pain{background:var(--warm-white)}
+.pain-head{margin-bottom:56px}
+.pain-head .sec-lead{max-width:560px}
+.pain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.pain-card{padding:36px 32px;border:1px solid var(--border);border-radius:12px;background:var(--white);position:relative;transition:all 0.25s}
+.pain-card:hover{transform:translateY(-3px);box-shadow:0 12px 36px rgba(26,32,44,0.07)}
+.pain-q{font-family:'Noto Sans JP',sans-serif;font-size:0.72rem;font-weight:600;color:var(--teal-deep);letter-spacing:1px;margin-bottom:16px;padding:4px 12px;background:var(--teal-ghost);border-radius:3px;display:inline-block}
+.pain-text{font-size:0.95rem;font-weight:700;color:var(--navy);line-height:1.7;margin-bottom:14px}
+.pain-sub{font-size:0.8rem;color:var(--slate);line-height:1.9}
+.pain-arrow{position:absolute;bottom:28px;right:28px;font-size:0.75rem;color:var(--slate-light)}
+@media(max-width:800px){.pain-grid{grid-template-columns:1fr}}
 
-/* ─── SKILLS ─── */
-.skills{background:var(--white)}
-.skills-layout{display:grid;grid-template-columns:280px 1fr;gap:72px;align-items:start}
-.skills-side{position:sticky;top:88px}
-.skills-side .sec-lead{max-width:100%}
-.demand-box{margin-top:28px;padding:20px;background:var(--fog);border-radius:8px;border:1px solid var(--border)}
-.demand-title{font-size:0.7rem;color:var(--slate-light);margin-bottom:14px;font-weight:500;letter-spacing:0.5px}
-.demand-list{display:flex;flex-direction:column;gap:12px}
-.demand-row{display:flex;align-items:center;gap:10px}
-.demand-name{font-size:0.7rem;color:var(--slate);width:96px;flex-shrink:0}
-.demand-bar-wrap{flex:1;height:3px;background:rgba(0,0,0,0.07);border-radius:2px;overflow:hidden}
-.demand-bar-fill{height:100%;background:linear-gradient(90deg,var(--teal),var(--teal-deep));border-radius:2px;width:0;transition:width 1.1s cubic-bezier(0.22,1,0.36,1)}
-.demand-level{font-family:'Outfit',sans-serif;font-size:0.62rem;font-weight:700;color:var(--teal-deep);width:32px;text-align:right;flex-shrink:0}
-.skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-.skill-card{padding:26px;border:1px solid var(--border);border-radius:10px;transition:all 0.25s;cursor:pointer;background:var(--white)}
-.skill-card:hover{border-color:var(--teal);transform:translateY(-3px);box-shadow:0 12px 32px rgba(58,156,168,0.1)}
-.skill-top{display:flex;align-items:flex-start;gap:14px;margin-bottom:12px}
-.skill-icon{width:38px;height:38px;background:var(--teal-ghost);border-radius:8px;border:1px solid var(--border-teal);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
-.skill-name{font-family:'Noto Sans JP',sans-serif;font-size:0.9rem;font-weight:700;color:var(--navy);margin-bottom:3px;line-height:1.4}
-.skill-demand{font-family:'Outfit',sans-serif;font-size:0.6rem;font-weight:700;letter-spacing:1px;color:var(--teal-deep)}
-.skill-tags{display:flex;flex-wrap:wrap;gap:6px}
-.skill-tag{font-size:0.67rem;color:var(--slate-light);background:var(--fog);padding:3px 9px;border-radius:3px;letter-spacing:0.2px}
-@media(max-width:920px){.skills-layout{grid-template-columns:1fr}.skills-side{position:static}}
-@media(max-width:600px){.skills-grid{grid-template-columns:1fr}}
-
-/* ─── HOW IT WORKS ─── */
-.how{background:var(--fog)}
-.how-head{margin-bottom:60px}
-.steps-wrap{position:relative}
-.steps-line{position:absolute;top:36px;left:calc(12.5%);right:calc(12.5%);height:1.5px;background:linear-gradient(90deg,var(--teal-pale) 0%,var(--teal) 50%,var(--teal-pale) 100%);z-index:0}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative;z-index:1}
-.step{text-align:center;padding:0 20px}
-.step-ring{width:72px;height:72px;border-radius:50%;background:var(--white);border:2px solid var(--teal);display:flex;align-items:center;justify-content:center;margin:0 auto 22px;font-family:'Outfit',sans-serif;font-size:1.3rem;font-weight:800;color:var(--teal-deep);transition:all 0.3s}
-.step:hover .step-ring{background:var(--teal-deep);color:#fff;border-color:var(--teal-deep);transform:scale(1.07)}
-.step-timing{font-family:'Outfit',sans-serif;font-size:0.56rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--teal);margin-bottom:8px}
-.step h3{font-family:'Noto Sans JP',sans-serif;font-size:0.9rem;font-weight:700;color:var(--navy);margin-bottom:8px;line-height:1.5}
-.step p{font-size:0.78rem;color:var(--slate);line-height:1.95}
-@media(max-width:800px){.steps-line{display:none}.steps{grid-template-columns:1fr 1fr;gap:32px}}
-@media(max-width:500px){.steps{grid-template-columns:1fr}}
-
-/* ─── VOICES ─── */
+/* VOICES */
 .voices{background:var(--white)}
-.voices-head{margin-bottom:52px}
+.voices-head{margin-bottom:20px}
+.voices-intro{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:48px;flex-wrap:wrap}
+.voices-intro-text{}
+.voices-note{font-size:0.78rem;color:var(--slate-light);line-height:1.8;max-width:360px}
 .voices-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .voice-card{padding:34px;border:1px solid var(--border);border-radius:12px;transition:all 0.25s;position:relative;background:var(--white)}
 .voice-card:hover{transform:translateY(-4px);box-shadow:0 16px 44px rgba(26,32,44,0.07)}
@@ -167,7 +130,35 @@ nav.scrolled{box-shadow:0 2px 20px rgba(26,32,44,0.07)}
 .vst{font-family:'Outfit',sans-serif;font-size:0.6rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--teal-deep);background:var(--teal-ghost);border:1px solid var(--border-teal);padding:2px 8px;border-radius:3px}
 @media(max-width:900px){.voices-grid{grid-template-columns:1fr}}
 
-/* ─── STATS ─── */
+/* ABOUT SERVICE */
+.about-svc{background:var(--fog)}
+.about-svc-layout{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.about-svc-text .sec-lead{max-width:100%}
+.about-svc-features{margin-top:32px;display:flex;flex-direction:column;gap:20px}
+.svc-feat{display:flex;gap:14px;align-items:flex-start;padding:20px;background:var(--white);border-radius:10px;border:1px solid var(--border)}
+.svc-feat-icon{width:38px;height:38px;background:var(--teal-ghost);border:1px solid var(--border-teal);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+.svc-feat-label{font-size:0.85rem;font-weight:700;color:var(--navy);margin-bottom:4px}
+.svc-feat-desc{font-size:0.77rem;color:var(--slate);line-height:1.85}
+.about-svc-visual{background:var(--white);border-radius:16px;padding:40px;border:1px solid var(--border)}
+.svc-model-title{font-family:'Outfit',sans-serif;font-size:0.6rem;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--teal);margin-bottom:24px}
+.svc-model{display:flex;flex-direction:column;gap:12px;align-items:center}
+.svc-model-node{background:var(--fog);border:1px solid var(--border);border-radius:8px;padding:14px 24px;text-align:center;width:100%}
+.svc-model-node-label{font-size:0.7rem;color:var(--slate-light);letter-spacing:1px;margin-bottom:4px}
+.svc-model-node-name{font-size:0.9rem;font-weight:700;color:var(--navy)}
+.svc-model-arrow{font-size:0.9rem;color:var(--teal);margin:4px 0}
+.svc-platform{background:var(--teal-ghost);border:1px solid var(--border-teal);border-radius:8px;padding:14px 24px;text-align:center;width:100%;margin:8px 0}
+.svc-platform-label{font-size:0.68rem;color:var(--teal-deep);letter-spacing:1px;margin-bottom:4px}
+.svc-platform-name{font-size:0.88rem;font-weight:700;color:var(--teal-dark)}
+.fee-note{margin-top:20px;padding:16px;background:var(--fog);border-radius:8px;border-left:3px solid var(--teal)}
+.fee-note-title{font-size:0.7rem;font-weight:700;color:var(--navy);margin-bottom:10px;letter-spacing:0.5px}
+.fee-row{display:flex;justify-content:space-between;align-items:center;font-size:0.78rem;padding:6px 0;border-bottom:1px solid var(--border)}
+.fee-row:last-child{border-bottom:none}
+.fee-type{color:var(--slate)}
+.fee-val{font-family:'Outfit',sans-serif;font-weight:700;color:var(--teal-dark)}
+.fee-val.free{color:#2D6B52}
+@media(max-width:900px){.about-svc-layout{grid-template-columns:1fr}}
+
+/* STATS */
 .stats-sec{background:var(--navy);padding:80px 40px}
 .stats-inner{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,0.05)}
 .stat-box{padding:48px 32px;background:var(--navy);text-align:center}
@@ -176,10 +167,73 @@ nav.scrolled{box-shadow:0 2px 20px rgba(26,32,44,0.07)}
 .stat-label{font-size:0.76rem;color:rgba(255,255,255,0.45);line-height:1.7}
 @media(max-width:700px){.stats-inner{grid-template-columns:1fr 1fr}}
 
-/* ─── ABOUT AMA ─── */
+/* HOW IT WORKS */
+.how{background:var(--fog)}
+.how-head{margin-bottom:60px}
+.steps-wrap{position:relative}
+.steps-line{position:absolute;top:36px;left:calc(12.5%);right:calc(12.5%);height:1.5px;background:linear-gradient(90deg,var(--teal-pale) 0%,var(--teal) 50%,var(--teal-pale) 100%);z-index:0}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);position:relative;z-index:1}
+.step{text-align:center;padding:0 20px}
+.step-ring{width:72px;height:72px;border-radius:50%;background:var(--white);border:2px solid var(--teal);display:flex;align-items:center;justify-content:center;margin:0 auto 22px;font-family:'Outfit',sans-serif;font-size:1.3rem;font-weight:800;color:var(--teal-deep);transition:all 0.3s}
+.step:hover .step-ring{background:var(--teal-deep);color:#fff;border-color:var(--teal-deep);transform:scale(1.07)}
+.step-timing{font-family:'Outfit',sans-serif;font-size:0.56rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--teal);margin-bottom:8px}
+.step h3{font-family:'Noto Sans JP',sans-serif;font-size:0.9rem;font-weight:700;color:var(--navy);margin-bottom:8px;line-height:1.5}
+.step p{font-size:0.78rem;color:var(--slate);line-height:1.95}
+@media(max-width:800px){.steps-line{display:none}.steps{grid-template-columns:1fr 1fr;gap:32px}}
+
+/* SKILLS */
+.skills{background:var(--white)}
+.skills-layout{display:grid;grid-template-columns:280px 1fr;gap:72px;align-items:start}
+.skills-side{position:sticky;top:88px}
+.skills-side .sec-lead{max-width:100%}
+.skills-count{display:inline-flex;align-items:baseline;gap:6px;margin-top:24px}
+.skills-count-num{font-family:'Outfit',sans-serif;font-size:3rem;font-weight:900;color:var(--teal);letter-spacing:-2px;line-height:1}
+.skills-count-label{font-size:0.78rem;color:var(--slate)}
+.skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.skill-card{padding:24px;border:1px solid var(--border);border-radius:10px;transition:all 0.25s;background:var(--white)}
+.skill-card:hover{border-color:var(--teal);transform:translateY(-3px);box-shadow:0 12px 32px rgba(58,156,168,0.1)}
+.skill-top{display:flex;align-items:flex-start;gap:12px;margin-bottom:12px}
+.skill-icon{width:36px;height:36px;background:var(--teal-ghost);border:1px solid var(--border-teal);border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:0.95rem;flex-shrink:0}
+.skill-name{font-size:0.88rem;font-weight:700;color:var(--navy);margin-bottom:2px;line-height:1.4}
+.skill-demand{font-family:'Outfit',sans-serif;font-size:0.6rem;font-weight:700;letter-spacing:1px;color:var(--teal-deep)}
+.skill-tags{display:flex;flex-wrap:wrap;gap:5px}
+.skill-tag{font-size:0.66rem;color:var(--slate-light);background:var(--fog);padding:3px 8px;border-radius:3px}
+@media(max-width:920px){.skills-layout{grid-template-columns:1fr}.skills-side{position:static}}
+@media(max-width:600px){.skills-grid{grid-template-columns:1fr}}
+
+/* AMBASSADOR */
+.ambassador{background:linear-gradient(135deg,var(--teal-dark) 0%,#0A3D44 100%);padding:100px 40px;position:relative;overflow:hidden}
+.ambassador::before{content:'';position:absolute;top:-100px;right:-80px;width:400px;height:400px;border-radius:50%;background:rgba(58,156,168,0.1);pointer-events:none}
+.ambassador::after{content:'';position:absolute;bottom:-60px;left:-60px;width:260px;height:260px;border-radius:50%;background:rgba(58,156,168,0.07);pointer-events:none}
+.ambassador-inner{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;position:relative;z-index:1}
+.ambassador-text .sec-label{color:rgba(255,255,255,0.4)}
+.ambassador-text .sec-title{color:#fff}
+.ambassador-text .sec-lead{color:rgba(255,255,255,0.6)}
+.ambassador-steps{margin-top:28px;display:flex;flex-direction:column;gap:14px}
+.am-step{display:flex;align-items:center;gap:14px;padding:16px 20px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:8px}
+.am-step-num{font-family:'Outfit',sans-serif;font-size:1.4rem;font-weight:900;color:rgba(58,156,168,0.6);line-height:1;flex-shrink:0;width:32px}
+.am-step-text{}
+.am-step-label{font-size:0.8rem;font-weight:600;color:#fff;margin-bottom:2px}
+.am-step-desc{font-size:0.73rem;color:rgba(255,255,255,0.5);line-height:1.7}
+.ambassador-fee{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:14px;padding:36px}
+.fee-compare-title{font-family:'Outfit',sans-serif;font-size:0.6rem;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:24px}
+.fee-compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.fee-compare-item{padding:24px 20px;border-radius:10px;text-align:center}
+.fee-compare-item.standard{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1)}
+.fee-compare-item.ambassador{background:rgba(58,156,168,0.15);border:1px solid rgba(58,156,168,0.3)}
+.fee-compare-label{font-size:0.7rem;color:rgba(255,255,255,0.45);margin-bottom:12px;letter-spacing:1px}
+.fee-compare-num{font-family:'Outfit',sans-serif;font-size:2.4rem;font-weight:900;line-height:1;margin-bottom:6px}
+.fee-compare-item.standard .fee-compare-num{color:rgba(255,255,255,0.6)}
+.fee-compare-item.ambassador .fee-compare-num{color:var(--teal)}
+.fee-compare-desc{font-size:0.7rem;color:rgba(255,255,255,0.4);line-height:1.7}
+.fee-compare-item.ambassador .fee-compare-desc{color:rgba(58,156,168,0.7)}
+.fee-note-text{font-size:0.72rem;color:rgba(255,255,255,0.3);margin-top:16px;line-height:1.8;text-align:center}
+@media(max-width:920px){.ambassador-inner{grid-template-columns:1fr}}
+
+/* ABOUT AMA */
 .about-ama{background:var(--fog)}
 .about-layout{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-.about-text .sec-lead{max-width:100%}
+.about-ama .sec-lead{max-width:100%}
 .about-features{margin-top:32px;display:flex;flex-direction:column;gap:18px}
 .about-feat{display:flex;gap:14px;align-items:flex-start}
 .about-feat-icon{width:36px;height:36px;background:var(--teal-ghost);border:1px solid var(--border-teal);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:0.9rem;flex-shrink:0}
@@ -194,7 +248,7 @@ nav.scrolled{box-shadow:0 2px 20px rgba(26,32,44,0.07)}
 .ama-area-label{font-size:0.7rem;color:rgba(13,74,82,0.45);letter-spacing:1px}
 @media(max-width:920px){.about-layout{grid-template-columns:1fr}}
 
-/* ─── FAQ ─── */
+/* FAQ */
 .faq-sec{background:var(--white)}
 .faq-inner{max-width:760px;margin:0 auto}
 .faq-head{margin-bottom:44px}
@@ -208,22 +262,22 @@ nav.scrolled{box-shadow:0 2px 20px rgba(26,32,44,0.07)}
 .faq-a-inner{padding:0 0 20px;font-size:0.83rem;color:var(--slate);line-height:2.05}
 .faq-item.open .faq-a{max-height:320px}
 
-/* ─── FINAL CTA ─── */
+/* FINAL CTA */
 .final-cta{padding:100px 40px;background:var(--teal-dark);position:relative;overflow:hidden;text-align:center}
 .final-cta::before{content:'';position:absolute;top:-120px;right:-100px;width:520px;height:520px;border-radius:50%;background:rgba(58,156,168,0.1);pointer-events:none}
 .final-cta::after{content:'';position:absolute;bottom:-90px;left:-70px;width:320px;height:320px;border-radius:50%;background:rgba(58,156,168,0.07);pointer-events:none}
 .final-inner{max-width:720px;margin:0 auto;position:relative;z-index:1}
 .final-cta .sec-label{color:rgba(255,255,255,0.38)}
-.final-cta h2{font-family:'Noto Sans JP',sans-serif;font-size:clamp(1.6rem,3vw,2.3rem);font-weight:700;color:#fff;line-height:1.55;margin:14px 0 18px;letter-spacing:-0.01em}
+.final-cta h2{font-family:'Noto Sans JP',sans-serif;font-size:clamp(1.6rem,3vw,2.3rem);font-weight:700;color:#fff;line-height:1.55;margin:14px 0 18px}
 .final-cta p{font-size:0.88rem;color:rgba(255,255,255,0.6);line-height:2.1;margin-bottom:36px;font-weight:300}
 .final-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:24px}
 .btn-white{display:inline-flex;align-items:center;gap:10px;background:#fff;color:var(--teal-dark);padding:15px 34px;font-family:'Outfit',sans-serif;font-size:0.9rem;font-weight:700;letter-spacing:0.5px;border-radius:6px;transition:all 0.2s}
 .btn-white:hover{transform:translateY(-2px);box-shadow:0 10px 36px rgba(0,0,0,0.2)}
 .btn-ghost{display:inline-flex;align-items:center;gap:10px;background:transparent;color:rgba(255,255,255,0.75);padding:15px 28px;font-size:0.88rem;font-weight:400;border:1px solid rgba(255,255,255,0.28);border-radius:6px;transition:all 0.2s}
 .btn-ghost:hover{border-color:rgba(255,255,255,0.65);color:#fff}
-.final-note{font-size:0.7rem;color:rgba(255,255,255,0.3);letter-spacing:0.5px}
+.final-note{font-size:0.7rem;color:rgba(255,255,255,0.3);letter-spacing:0.3px}
 
-/* ─── FOOTER ─── */
+/* FOOTER */
 footer{background:#111827;padding:44px 40px 36px}
 .footer-inner{max-width:1160px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap}
 .footer-logo{font-family:'Outfit',sans-serif;font-weight:700;font-size:0.88rem;letter-spacing:3px;color:rgba(255,255,255,0.55)}
@@ -233,13 +287,13 @@ footer{background:#111827;padding:44px 40px 36px}
 .footer-links a:hover{color:rgba(255,255,255,0.65)}
 .footer-copy{font-size:0.68rem;color:rgba(255,255,255,0.18)}
 
-/* ─── FLOATING CTA ─── */
+/* FLOAT CTA */
 .float-cta{position:fixed;bottom:28px;right:28px;z-index:450;opacity:0;pointer-events:none;transform:translateY(10px);transition:opacity 0.4s,transform 0.4s}
 .float-cta.show{opacity:1;pointer-events:auto;transform:none}
 .float-cta a{display:inline-flex;align-items:center;gap:9px;background:var(--teal-deep);color:#fff;padding:12px 22px;border-radius:6px;font-family:'Outfit',sans-serif;font-size:0.82rem;font-weight:600;letter-spacing:0.5px;box-shadow:0 8px 32px rgba(27,107,118,0.32);transition:all 0.2s}
-.float-cta a:hover{background:var(--teal-dark);transform:translateY(-2px);box-shadow:0 12px 42px rgba(27,107,118,0.42)}
+.float-cta a:hover{background:var(--teal-dark);transform:translateY(-2px)}
 
-/* ─── ANIMATIONS ─── */
+/* ANIMATIONS */
 @keyframes hFadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
 .fade-up{opacity:0;transform:translateY(22px);transition:opacity 0.7s cubic-bezier(0.22,1,0.36,1),transform 0.7s cubic-bezier(0.22,1,0.36,1)}
 .fade-up.visible{opacity:1;transform:none}
@@ -258,8 +312,8 @@ footer{background:#111827;padding:44px 40px 36px}
     </div>
     <div class="nav-right">
       <a href="#faq" class="nav-link">よくある質問</a>
-      <a href="#skills" class="nav-link">スキル一覧</a>
-      <a href="#register" class="nav-cta">無料で登録 →</a>
+      <a href="#skills" class="nav-link">仕事カテゴリ</a>
+      <a href="#register" class="nav-cta">ワーカーとして始める →</a>
       <button class="hamburger" aria-label="メニュー"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -269,18 +323,19 @@ footer{background:#111827;padding:44px 40px 36px}
 <section class="hero" id="hero">
   <div class="hero-text">
     <div class="hero-eyebrow">For Workers</div>
-    <h1>あなたのスキルで、<br>島の未来を<em>動かす。</em></h1>
-    <p class="hero-lead">海士町の事業者が、あなたの専門知識を必要としています。リモートからでも、週数時間からでも。副業・複業ではじめられる、島との新しい関わり方。</p>
-    <div class="hero-note">登録無料 &ensp;·&ensp; リモートワーク対応 &ensp;·&ensp; 副業・複業OK &ensp;·&ensp; 移住不要</div>
+    <h1>スキルがある。<br>関わってみたい気持ちがある。<br><em>それだけで、十分です。</em><small>移住しなくていい。副業でいい。週数時間からでいい。</small></h1>
+    <p class="hero-lead">海士町の事業者が、あなたの専門知識を必要としています。自分のスキルを活かして新しい仕事を獲得したい人、地域に関わってみたいけれど移住まではできない人のための、新しい働き方のプラットフォームです。</p>
+    <div class="hero-tags">
+      <span class="hero-tag">登録無料</span>
+      <span class="hero-tag">リモートワーク対応</span>
+      <span class="hero-tag">副業・複業OK</span>
+      <span class="hero-tag">25種類以上の業務カテゴリ</span>
+    </div>
     <div class="hero-btns">
-      <a href="#register" class="btn-primary">無料でワーカー登録 →</a>
-      <a href="#how" class="btn-secondary">仕事の流れを見る</a>
+      <a href="#register" class="btn-primary">ワーカーとして始める →</a>
+      <a href="#about-svc" class="btn-secondary">まず話を聞く（無料）</a>
     </div>
-    <div class="hero-checks">
-      <span class="hero-check">初回相談無料</span>
-      <span class="hero-check">強引な勧誘なし</span>
-      <span class="hero-check">週5時間〜OK</span>
-    </div>
+    <p class="hero-note">登録後、担当コーディネーターからご連絡します。強引な勧誘は一切行いません。</p>
   </div>
   <div class="hero-visual">
     <div class="h-orb h-orb-1"></div>
@@ -291,44 +346,220 @@ footer{background:#111827;padding:44px 40px 36px}
       <div class="island-kanji">海士町</div>
       <div class="island-desc">島根県隠岐郡 · 人口約2,300人</div>
       <div class="island-stats">
+        <div class="island-stat"><strong>25+</strong> 業務カテゴリ</div>
         <div class="island-stat"><strong>80+</strong> 参加事業者</div>
         <div class="island-stat"><strong>500+</strong> 登録ワーカー</div>
-        <div class="island-stat"><strong>100%</strong> 副業・複業対応</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- REASONS -->
-<section class="sec-wrap reasons" id="reasons">
+<!-- PAIN POINTS -->
+<section class="sec-wrap pain" id="pain">
   <div class="sec-inner">
-    <div class="reasons-head fade-up">
-      <span class="chap-label">CHAPTER 01</span>
-      <span class="sec-label">WHY MACHIWORK</span>
-      <h2 class="sec-title">なぜ、海士町で働くのか</h2>
-      <p class="sec-lead">離島という特殊な環境だからこそ生まれる、ほかにはない仕事の手応え。あなたのスキルが、ここでは本当に必要とされています。</p>
+    <div class="pain-head fade-up">
+      <span class="sec-label">DOES THIS SOUND LIKE YOU?</span>
+      <h2 class="sec-title">こんな気持ち、ありませんか？</h2>
+      <p class="sec-lead">MACHIWORKに参加するワーカーの多くが、はじめは同じ気持ちを持っていました。</p>
     </div>
-    <div class="reasons-grid">
-      <div class="reason-card fade-up">
-        <span class="reason-num">01</span>
-        <div class="reason-icon">🌊</div>
-        <h3>スキルが「本当に」<br>必要とされている</h3>
-        <p>都市部では当たり前のスキルが、島では希少な価値を持ちます。提案がそのまま事業の課題解決につながり、「やった感」がまったく違います。</p>
-        <div class="reason-pill">HIGH IMPACT</div>
+    <div class="pain-grid">
+      <div class="pain-card fade-up">
+        <div class="pain-q">スキルを活かしたい</div>
+        <p class="pain-text">「自分のスキルを発揮できる仕事が、もっとあればいいのに」</p>
+        <p class="pain-sub">本業では使いきれていない専門性がある。もっと「効いている」実感が欲しい。そう感じているあなたへ。</p>
+        <span class="pain-arrow">→</span>
       </div>
-      <div class="reason-card fade-up">
-        <span class="reason-num">02</span>
-        <div class="reason-icon">🤝</div>
-        <h3>事業者と<br>直接つながれる</h3>
-        <p>大手クラウドサービスとは違い、島の事業者と直接コミュニケーション。文化・背景を理解しながら、長期的な信頼関係を育てていけます。</p>
-        <div class="reason-pill">DIRECT CONNECT</div>
+      <div class="pain-card fade-up">
+        <div class="pain-q">副業・刺激がほしい</div>
+        <p class="pain-text">「副業や隙間時間で、自分の人生にもっと刺激を加えたい」</p>
+        <p class="pain-sub">いつもと違う環境に飛び込んでみたい。仕事を通じて、新しい自分の可能性を見つけたい。</p>
+        <span class="pain-arrow">→</span>
       </div>
-      <div class="reason-card fade-up">
-        <span class="reason-num">03</span>
-        <div class="reason-icon">🚀</div>
-        <h3>キャリアに<br>新しい軸をつくれる</h3>
-        <p>本業とは異なる文脈での経験は、思わぬキャリアの可能性を開きます。「地域×専門スキル」の組み合わせは、これからの時代に強い差別化になります。</p>
-        <div class="reason-pill">CAREER GROWTH</div>
+      <div class="pain-card fade-up">
+        <div class="pain-q">地域に関わりたい</div>
+        <p class="pain-text">「地域に関わってみたいが、移住するほどではない」</p>
+        <p class="pain-sub">地域課題に貢献したい気持ちはある。でも、いきなり移住は難しい。そのちょうど中間の関わり方が、ここにあります。</p>
+        <span class="pain-arrow">→</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VOICES（感情先行） -->
+<section class="sec-wrap voices" id="voices">
+  <div class="sec-inner">
+    <div class="voices-intro fade-up">
+      <div class="voices-intro-text">
+        <span class="sec-label">WORKER VOICES</span>
+        <h2 class="sec-title">参加したワーカーの声</h2>
+      </div>
+      <p class="voices-note">今は仮の声・顔です。素材が集まり次第、実際にご参加いただいたワーカーさんの写真・コメントに差し替えていきます。</p>
+    </div>
+    <div class="voices-grid">
+      <div class="voice-card fade-up">
+        <div class="voice-mark">"</div>
+        <p class="voice-text">副業として週8時間だけ参加したのに、海士町の魅力にはまってしまいました。今では毎年現地を訪問して、長期パートナーとして動いています。「やった感」がまったく違う。</p>
+        <div class="voice-person">
+          <div class="voice-avatar av-a">K</div>
+          <div>
+            <div class="voice-name">K.M さん（東京都在住）</div>
+            <div class="voice-meta">Webデザイナー · 週10時間 · アンバサダー認定</div>
+            <div class="voice-skill-tags"><span class="vst">UI/UX</span><span class="vst">LP制作</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="voice-card fade-up">
+        <div class="voice-mark">"</div>
+        <p class="voice-text">都市のクライアントより、島の事業者とのやりとりのほうがずっとダイレクト。自分の提案が数日後に形になっている手応えが、モチベーションになっています。</p>
+        <div class="voice-person">
+          <div class="voice-avatar av-b">Y</div>
+          <div>
+            <div class="voice-name">Y.T さん（大阪府在住）</div>
+            <div class="voice-meta">マーケター · 月2回現地訪問</div>
+            <div class="voice-skill-tags"><span class="vst">SNS運用</span><span class="vst">コンテンツ</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="voice-card fade-up">
+        <div class="voice-mark">"</div>
+        <p class="voice-text">全部リモートで完結しています。でもオンラインで話す島の人たちの熱量がすごくて、気づいたら自分も海士町のファンになっていました。</p>
+        <div class="voice-person">
+          <div class="voice-avatar av-c">A</div>
+          <div>
+            <div class="voice-name">A.S さん（福岡県在住）</div>
+            <div class="voice-meta">エンジニア · フルリモート</div>
+            <div class="voice-skill-tags"><span class="vst">バックエンド</span><span class="vst">DX</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT SERVICE -->
+<section class="sec-wrap about-svc" id="about-svc">
+  <div class="sec-inner">
+    <div class="about-svc-layout">
+      <div class="about-svc-text fade-up">
+        <span class="chap-label">ABOUT MACHIWORK</span>
+        <span class="sec-label">SERVICE MODEL</span>
+        <h2 class="sec-title">MACHIWORKとは</h2>
+        <p class="sec-lead">海士町の地域財団が提供する、事業者とワーカーをつなぐ業務マッチングプラットフォームです。事業者とワーカーが直接契約を結ぶ形式で、安心して仕事を進められます。</p>
+        <div class="about-svc-features">
+          <div class="svc-feat fade-up">
+            <div class="svc-feat-icon">🤝</div>
+            <div>
+              <div class="svc-feat-label">事業者と直接つながる</div>
+              <div class="svc-feat-desc">大手プラットフォームとは違い、島の事業者と直接コミュニケーション。文化・背景を理解しながら関係を育てられます。</div>
+            </div>
+          </div>
+          <div class="svc-feat fade-up">
+            <div class="svc-feat-icon">🌊</div>
+            <div>
+              <div class="svc-feat-label">スキルが「本当に」必要とされる</div>
+              <div class="svc-feat-desc">都市では当たり前のスキルが、島では希少な価値を持ちます。提案がそのまま課題解決につながる手応えがあります。</div>
+            </div>
+          </div>
+          <div class="svc-feat fade-up">
+            <div class="svc-feat-icon">🚀</div>
+            <div>
+              <div class="svc-feat-label">関わるほど、深くなれる</div>
+              <div class="svc-feat-desc">継続的な関与でアンバサダーになれます。島のファンとして、将来の関係人口として関わり続けられます。</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-svc-visual fade-up">
+        <div class="svc-model-title">SERVICE STRUCTURE</div>
+        <div class="svc-model">
+          <div class="svc-model-node">
+            <div class="svc-model-node-label">WORKER</div>
+            <div class="svc-model-node-name">あなた（ワーカー）</div>
+          </div>
+          <div class="svc-model-arrow">↕ 直接契約・直接コミュニケーション</div>
+          <div class="svc-model-node">
+            <div class="svc-model-node-label">CLIENT</div>
+            <div class="svc-model-node-name">海士町の事業者</div>
+          </div>
+          <div class="svc-model-arrow" style="color:rgba(0,0,0,0.2);font-size:0.75rem">プラットフォーム提供</div>
+          <div class="svc-platform">
+            <div class="svc-platform-label">PLATFORM</div>
+            <div class="svc-platform-name">MACHIWORK（海士町財団）</div>
+          </div>
+        </div>
+        <div class="fee-note">
+          <div class="fee-note-title">手数料体系</div>
+          <div class="fee-row">
+            <span class="fee-type">一般ワーカー</span>
+            <span class="fee-val">10%</span>
+          </div>
+          <div class="fee-row">
+            <span class="fee-type">アンバサダー認定後</span>
+            <span class="fee-val free">0%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats-sec">
+  <div class="stats-inner">
+    <div class="stat-box">
+      <div class="stat-num"><span class="cnt" data-t="25">0</span><sup>+</sup></div>
+      <div class="stat-label">業務<br>カテゴリ数</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num"><span class="cnt" data-t="80">0</span><sup>+</sup></div>
+      <div class="stat-label">参加<br>事業者数</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num"><span class="cnt" data-t="500">0</span><sup>+</sup></div>
+      <div class="stat-label">登録<br>ワーカー数</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num"><span class="cnt" data-t="78">0</span><sup>%</sup></div>
+      <div class="stat-label">マッチング<br>成功率</div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="sec-wrap how" id="how">
+  <div class="sec-inner">
+    <div class="how-head fade-up">
+      <span class="sec-label">HOW IT WORKS</span>
+      <h2 class="sec-title">仕事の流れ</h2>
+      <p class="sec-lead" style="max-width:520px">登録から案件スタートまで、コーディネーターがサポートします。</p>
+    </div>
+    <div class="steps-wrap">
+      <div class="steps-line"></div>
+      <div class="steps">
+        <div class="step fade-up">
+          <div class="step-ring">01</div>
+          <div class="step-timing">DAY 1</div>
+          <h3>プロフィール登録</h3>
+          <p>スキル・経験・稼働可能時間を登録。専門分野と希望条件を入力します。</p>
+        </div>
+        <div class="step fade-up">
+          <div class="step-ring">02</div>
+          <div class="step-timing">DAY 3–7</div>
+          <h3>マッチング</h3>
+          <p>事業者のニーズとスキルを照合。担当コーディネーターからご連絡します。</p>
+        </div>
+        <div class="step fade-up">
+          <div class="step-ring">03</div>
+          <div class="step-timing">DAY 7–14</div>
+          <h3>顔合わせ・合意</h3>
+          <p>事業者とオンラインで顔合わせ。条件を確認し、プロジェクト開始を決めます。</p>
+        </div>
+        <div class="step fade-up">
+          <div class="step-ring">04</div>
+          <div class="step-timing">ONGOING</div>
+          <h3>稼働・アンバサダーへ</h3>
+          <p>リモートまたは現地で稼働。継続的な関与でアンバサダー認定（手数料0%）を目指せます。</p>
+        </div>
       </div>
     </div>
   </div>
@@ -339,34 +570,12 @@ footer{background:#111827;padding:44px 40px 36px}
   <div class="sec-inner">
     <div class="skills-layout">
       <div class="skills-side fade-up">
-        <span class="chap-label">CHAPTER 02</span>
         <span class="sec-label">SKILL CATEGORIES</span>
-        <h2 class="sec-title">求められている<br>スキル</h2>
-        <p class="sec-lead">海士町の事業者が特に必要としているスキル領域です。あなたの専門分野で貢献できる案件が見つかります。</p>
-        <div class="demand-box">
-          <div class="demand-title">スキル別 需要レベル</div>
-          <div class="demand-list">
-            <div class="demand-row">
-              <span class="demand-name">Web・デザイン</span>
-              <div class="demand-bar-wrap"><div class="demand-bar-fill" data-w="92%"></div></div>
-              <span class="demand-level">HIGH</span>
-            </div>
-            <div class="demand-row">
-              <span class="demand-name">マーケティング</span>
-              <div class="demand-bar-wrap"><div class="demand-bar-fill" data-w="88%"></div></div>
-              <span class="demand-level">HIGH</span>
-            </div>
-            <div class="demand-row">
-              <span class="demand-name">ITエンジニア</span>
-              <div class="demand-bar-wrap"><div class="demand-bar-fill" data-w="80%"></div></div>
-              <span class="demand-level">MED</span>
-            </div>
-            <div class="demand-row">
-              <span class="demand-name">財務・経理</span>
-              <div class="demand-bar-wrap"><div class="demand-bar-fill" data-w="72%"></div></div>
-              <span class="demand-level">MED</span>
-            </div>
-          </div>
+        <h2 class="sec-title">求められている<br>仕事カテゴリ</h2>
+        <p class="sec-lead">SNS運用・デザイン・Web制作・マーケティング・EC強化・事業サポートなど、幅広い業務で海士町の事業者が専門家を必要としています。</p>
+        <div class="skills-count">
+          <span class="skills-count-num">25<sup style="font-size:1.5rem">+</sup></span>
+          <span class="skills-count-label">の業務カテゴリ</span>
         </div>
       </div>
       <div class="skills-grid">
@@ -391,7 +600,7 @@ footer{background:#111827;padding:44px 40px 36px}
             </div>
           </div>
           <div class="skill-tags">
-            <span class="skill-tag">SNS運用</span><span class="skill-tag">コンテンツ企画</span><span class="skill-tag">広告運用</span><span class="skill-tag">メルマガ</span>
+            <span class="skill-tag">SNS運用</span><span class="skill-tag">コンテンツ企画</span><span class="skill-tag">広告運用</span><span class="skill-tag">EC強化</span>
           </div>
         </div>
         <div class="skill-card fade-up">
@@ -447,114 +656,52 @@ footer{background:#111827;padding:44px 40px 36px}
   </div>
 </section>
 
-<!-- HOW IT WORKS -->
-<section class="sec-wrap how" id="how">
-  <div class="sec-inner">
-    <div class="how-head fade-up">
-      <span class="chap-label">CHAPTER 03</span>
-      <span class="sec-label">HOW IT WORKS</span>
-      <h2 class="sec-title">仕事の流れ</h2>
-      <p class="sec-lead" style="max-width:520px">登録から案件スタートまで、スムーズに進められるよう設計されています。</p>
-    </div>
-    <div class="steps-wrap">
-      <div class="steps-line"></div>
-      <div class="steps">
-        <div class="step fade-up">
-          <div class="step-ring">01</div>
-          <div class="step-timing">DAY 1</div>
-          <h3>プロフィール登録</h3>
-          <p>スキル・経験・稼働可能時間を登録。専門分野と希望条件を入力します。</p>
-        </div>
-        <div class="step fade-up">
-          <div class="step-ring">02</div>
-          <div class="step-timing">DAY 3–7</div>
-          <h3>マッチング</h3>
-          <p>事業者のニーズとスキルを照合。担当コーディネーターからご連絡します。</p>
-        </div>
-        <div class="step fade-up">
-          <div class="step-ring">03</div>
-          <div class="step-timing">DAY 7–14</div>
-          <h3>顔合わせ・合意</h3>
-          <p>事業者とオンラインで顔合わせ。条件を確認し、プロジェクト開始を決めます。</p>
-        </div>
-        <div class="step fade-up">
-          <div class="step-ring">04</div>
-          <div class="step-timing">ONGOING</div>
-          <h3>稼働スタート</h3>
-          <p>リモートまたは現地で稼働開始。継続案件・長期パートナーシップも歓迎です。</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- VOICES -->
-<section class="sec-wrap voices" id="voices">
-  <div class="sec-inner">
-    <div class="voices-head fade-up">
-      <span class="chap-label">CHAPTER 04</span>
-      <span class="sec-label">WORKER VOICES</span>
-      <h2 class="sec-title">参加ワーカーの声</h2>
-    </div>
-    <div class="voices-grid">
-      <div class="voice-card fade-up">
-        <div class="voice-mark">"</div>
-        <p class="voice-text">副業として週8時間だけ参加したのに、海士町の魅力にはまってしまいました。今では毎年現地を訪問して、長期パートナーとして動いています。</p>
-        <div class="voice-person">
-          <div class="voice-avatar av-a">K</div>
-          <div>
-            <div class="voice-name">K.M さん（東京都在住）</div>
-            <div class="voice-meta">Webデザイナー · 週10時間</div>
-            <div class="voice-skill-tags"><span class="vst">UI/UX</span><span class="vst">LP制作</span></div>
+<!-- AMBASSADOR -->
+<section class="ambassador" id="ambassador">
+  <div class="ambassador-inner">
+    <div class="ambassador-text fade-up">
+      <span class="sec-label">AMBASSADOR PROGRAM</span>
+      <h2 class="sec-title">関わり続けると、<br>アンバサダーになれる</h2>
+      <p class="sec-lead">MACHIWORKは、一時的な仕事受注を超えた関係を目指しています。継続的に関わることで海士町のアンバサダーとして認定され、手数料が0%になります。</p>
+      <div class="ambassador-steps">
+        <div class="am-step">
+          <div class="am-step-num">01</div>
+          <div class="am-step-text">
+            <div class="am-step-label">ワーカーとして登録・初案件</div>
+            <div class="am-step-desc">プロフィールを登録して最初の案件をスタート。手数料は一般料率10%。</div>
           </div>
         </div>
-      </div>
-      <div class="voice-card fade-up">
-        <div class="voice-mark">"</div>
-        <p class="voice-text">都市のクライアントより、島の事業者とのやりとりのほうがずっとダイレクトで面白い。自分の提案が数日後には形になっている手応えが、モチベーションになっています。</p>
-        <div class="voice-person">
-          <div class="voice-avatar av-b">Y</div>
-          <div>
-            <div class="voice-name">Y.T さん（大阪府在住）</div>
-            <div class="voice-meta">マーケター · 月2回現地訪問</div>
-            <div class="voice-skill-tags"><span class="vst">SNS運用</span><span class="vst">コンテンツ</span></div>
+        <div class="am-step">
+          <div class="am-step-num">02</div>
+          <div class="am-step-text">
+            <div class="am-step-label">継続的な関与・信頼の構築</div>
+            <div class="am-step-desc">事業者との関係を深め、島のファンとして関わり続ける。</div>
           </div>
         </div>
-      </div>
-      <div class="voice-card fade-up">
-        <div class="voice-mark">"</div>
-        <p class="voice-text">全部リモートで完結しています。でもオンラインで話す島の人たちの熱量がすごくて、気づいたら自分も海士町のファンになっていました。</p>
-        <div class="voice-person">
-          <div class="voice-avatar av-c">A</div>
-          <div>
-            <div class="voice-name">A.S さん（福岡県在住）</div>
-            <div class="voice-meta">エンジニア · フルリモート</div>
-            <div class="voice-skill-tags"><span class="vst">バックエンド</span><span class="vst">DX</span></div>
+        <div class="am-step">
+          <div class="am-step-num">03</div>
+          <div class="am-step-text">
+            <div class="am-step-label">アンバサダー認定 → 手数料0%</div>
+            <div class="am-step-desc">海士町の「関係人口」として認定。以降の受注手数料が0%になります。</div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- STATS -->
-<section class="stats-sec">
-  <div class="stats-inner">
-    <div class="stat-box">
-      <div class="stat-num"><span class="cnt" data-t="500">0</span><sup>+</sup></div>
-      <div class="stat-label">登録<br>ワーカー数</div>
-    </div>
-    <div class="stat-box">
-      <div class="stat-num"><span class="cnt" data-t="80">0</span><sup>+</sup></div>
-      <div class="stat-label">参加<br>事業者数</div>
-    </div>
-    <div class="stat-box">
-      <div class="stat-num"><span class="cnt" data-t="78">0</span><sup>%</sup></div>
-      <div class="stat-label">マッチング<br>成功率</div>
-    </div>
-    <div class="stat-box">
-      <div class="stat-num"><span class="cnt" data-t="14">0</span><sub>ヶ月</sub></div>
-      <div class="stat-label">平均<br>継続期間</div>
+    <div class="ambassador-fee fade-up">
+      <div class="fee-compare-title">FEE COMPARISON</div>
+      <div class="fee-compare-grid">
+        <div class="fee-compare-item standard">
+          <div class="fee-compare-label">一般ワーカー</div>
+          <div class="fee-compare-num">10<span style="font-size:1.2rem;font-weight:600">%</span></div>
+          <div class="fee-compare-desc">受注額に対する<br>プラットフォーム手数料</div>
+        </div>
+        <div class="fee-compare-item ambassador">
+          <div class="fee-compare-label">アンバサダー認定後</div>
+          <div class="fee-compare-num">0<span style="font-size:1.2rem;font-weight:600">%</span></div>
+          <div class="fee-compare-desc">関わり続けることで<br>手数料が無料に</div>
+        </div>
+      </div>
+      <p class="fee-note-text">財団はプラットフォームの提供者です。事業者とワーカーの直接契約を支援します。</p>
     </div>
   </div>
 </section>
@@ -563,8 +710,7 @@ footer{background:#111827;padding:44px 40px 36px}
 <section class="sec-wrap about-ama" id="about">
   <div class="sec-inner">
     <div class="about-layout">
-      <div class="about-text fade-up">
-        <span class="chap-label">CHAPTER 05</span>
+      <div class="about-ama-text fade-up">
         <span class="sec-label">ABOUT AMA TOWN</span>
         <h2 class="sec-title">海士町という場所</h2>
         <p class="sec-lead">島根県隠岐諸島に浮かぶ人口約2,300人の島。「ないものはない」を合言葉に、日本の離島地域活性化のモデルとして全国から注目される特別な場所です。</p>
@@ -580,7 +726,7 @@ footer{background:#111827;padding:44px 40px 36px}
             <div class="about-feat-icon">🎓</div>
             <div>
               <div class="about-feat-label">全国から若者が集まる「島留学」の島</div>
-              <div class="about-feat-desc">隠岐島前高校の魅力化プロジェクトで有名。教育・人材育成においても先進的な取り組みが続きます。</div>
+              <div class="about-feat-desc">隠岐島前高校の魅力化プロジェクトで有名。将来の関係人口育成においても先進的な取り組みが続きます。</div>
             </div>
           </div>
           <div class="about-feat fade-up">
@@ -623,19 +769,19 @@ footer{background:#111827;padding:44px 40px 36px}
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">報酬の目安はどのくらいですか？<div class="faq-icon">+</div></div>
-        <div class="faq-a"><div class="faq-a-inner">案件・スキルレベルによって異なりますが、時給換算で2,500〜5,000円程度が多いです。プロジェクト型の場合は成果ベースでの報酬設定も可能です。詳細は案件ごとに事業者と直接ご相談いただきます。</div></div>
+        <div class="faq-a"><div class="faq-a-inner">案件・スキルレベルによって異なりますが、時給換算で2,500〜5,000円程度が多いです。プロジェクト型の場合は成果ベースでの報酬設定も可能です。詳細は案件ごとに事業者と直接ご相談いただきます。一般ワーカーの場合、受注額の10%がプラットフォーム手数料となります。</div></div>
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">登録に費用はかかりますか？<div class="faq-icon">+</div></div>
-        <div class="faq-a"><div class="faq-a-inner">ワーカー登録は完全無料です。マッチング・案件受注時の手数料も発生しません。報酬は事業者から直接お支払いいただく形式です。</div></div>
+        <div class="faq-a"><div class="faq-a-inner">ワーカー登録は完全無料です。プラットフォーム手数料は受注時に発生しますが（一般10%、アンバサダー0%）、登録・マッチング・相談の費用は一切かかりません。</div></div>
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">島への移住は必要ですか？<div class="faq-icon">+</div></div>
         <div class="faq-a"><div class="faq-a-inner">移住は一切必要ありません。今の生活・仕事をそのままに、島の仕事に関わることができます。ただし、海士町に実際に訪問したいという方には、お試し移住のご相談も承っています。</div></div>
       </div>
       <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">どんな事業者と仕事できますか？<div class="faq-icon">+</div></div>
-        <div class="faq-a"><div class="faq-a-inner">農業・水産業から飲食・宿泊、IT・教育まで多様な事業者が参加しています。小さくても熱量の高い経営者が多く、代表や経営幹部と直接仕事できる機会が豊富です。</div></div>
+        <div class="faq-q" onclick="toggleFaq(this)">アンバサダーになるにはどうすればいいですか？<div class="faq-icon">+</div></div>
+        <div class="faq-a"><div class="faq-a-inner">継続的に海士町の事業者と関わり、信頼関係を築くことでアンバサダーとして認定されます。認定条件の詳細はコーディネーターからご説明いたします。アンバサダー認定後は、プラットフォーム手数料が0%になります。</div></div>
       </div>
     </div>
   </div>
@@ -646,12 +792,12 @@ footer{background:#111827;padding:44px 40px 36px}
   <div class="final-inner">
     <span class="sec-label">JOIN US</span>
     <h2>あなたのスキルを、<br>島に届けてみませんか。</h2>
-    <p>登録は5分、完全無料。プロフィールを登録するだけで、海士町の事業者との新しい出会いが始まります。</p>
+    <p>登録は5分、完全無料。プロフィールを登録するだけで、海士町の事業者との新しい出会いが始まります。移住しなくていい。副業でいい。まず、一歩だけ踏み出してみてください。</p>
     <div class="final-btns">
-      <a href="#" class="btn-white">無料でワーカー登録 →</a>
+      <a href="#" class="btn-white">ワーカーとして始める →</a>
       <a href="#" class="btn-ghost">まず話を聞く（相談無料）</a>
     </div>
-    <p class="final-note">登録後、担当からご連絡いたします。強引な勧誘は一切行いません。</p>
+    <p class="final-note">登録後、担当コーディネーターからご連絡いたします。強引な勧誘は一切行いません。</p>
   </div>
 </section>
 
@@ -665,17 +811,17 @@ footer{background:#111827;padding:44px 40px 36px}
       <a href="#">利用規約</a>
       <a href="#">プライバシーポリシー</a>
     </div>
-    <div class="footer-copy">© 2024 MACHIWORK / 海士町</div>
+    <div class="footer-copy">© 2024 MACHIWORK / 海士町財団</div>
   </div>
 </footer>
 
 <!-- FLOAT CTA -->
 <div class="float-cta" id="float-cta">
-  <a href="#register">無料でワーカー登録 →</a>
+  <a href="#register">ワーカーとして始める →</a>
 </div>
 
 <script>
-// Scroll progress + nav shadow + float CTA
+// Scroll progress + nav + float CTA
 const prog=document.getElementById('scroll-progress');
 const mainNav=document.getElementById('main-nav');
 const floatCta=document.getElementById('float-cta');
@@ -695,10 +841,7 @@ window.addEventListener('scroll',()=>{
 // Fade-up on scroll
 const obs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{
-    if(e.isIntersecting){
-      e.target.classList.add('visible');
-      obs.unobserve(e.target);
-    }
+    if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}
   });
 },{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.fade-up').forEach((el,i)=>{
@@ -708,12 +851,12 @@ document.querySelectorAll('.fade-up').forEach((el,i)=>{
 
 // Hero stagger
 document.querySelectorAll('.hero-text > *').forEach((el,i)=>{
-  el.style.cssText+=';opacity:0;animation:hFadeUp 0.7s cubic-bezier(0.22,1,0.36,1) '+(0.08+i*0.09)+'s both';
+  el.style.cssText+=';opacity:0;animation:hFadeUp 0.7s cubic-bezier(0.22,1,0.36,1) '+(0.08+i*0.1)+'s both';
 });
 const hv=document.querySelector('.hero-visual');
 if(hv) hv.style.cssText+=';opacity:0;animation:hFadeUp 0.9s cubic-bezier(0.22,1,0.36,1) 0.15s both';
 
-// Counter animation
+// Counter
 const cntObs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{
     if(e.isIntersecting){
@@ -730,19 +873,7 @@ const cntObs=new IntersectionObserver(entries=>{
 },{threshold:0.5});
 document.querySelectorAll('.cnt').forEach(el=>cntObs.observe(el));
 
-// Demand bars
-const dbObs=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting){
-      e.target.querySelectorAll('.demand-bar-fill').forEach(b=>{b.style.width=b.dataset.w});
-      dbObs.unobserve(e.target);
-    }
-  });
-},{threshold:0.3});
-const db=document.querySelector('.demand-box');
-if(db) dbObs.observe(db);
-
-// FAQ toggle
+// FAQ
 function toggleFaq(btn){
   const item=btn.parentElement;
   const was=item.classList.contains('open');
