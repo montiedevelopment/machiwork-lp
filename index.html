@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MACHIWORK LP パターン比較</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Noto Sans JP',sans-serif;background:#0f1419;color:#fff;min-height:100vh}
+header{padding:48px 40px 32px;border-bottom:1px solid rgba(255,255,255,0.08)}
+.header-inner{max-width:1200px;margin:0 auto}
+.header-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(27,107,118,0.15);border:1px solid rgba(27,107,118,0.3);border-radius:4px;padding:5px 14px;font-size:0.68rem;font-weight:600;color:#1B6B76;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px;font-family:'Outfit',sans-serif}
+h1{font-family:'Outfit',sans-serif;font-size:1.6rem;font-weight:700;letter-spacing:2px;margin-bottom:8px;color:#fff}
+.header-sub{font-size:0.85rem;color:rgba(255,255,255,0.45);line-height:1.8}
+
+.patterns{max-width:1200px;margin:0 auto;padding:48px 40px;display:flex;flex-direction:column;gap:40px}
+
+.pattern-block{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:16px;overflow:hidden;transition:border-color 0.2s}
+.pattern-block:hover{border-color:rgba(58,156,168,0.3)}
+
+.pattern-header{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;padding:28px 32px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.pattern-meta{}
+.pattern-tag{display:inline-block;font-size:0.65rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;padding:3px 10px;border-radius:3px;margin-bottom:10px}
+.tag-a{background:rgba(27,107,118,0.2);color:#3A9CA8;border:1px solid rgba(58,156,168,0.35)}
+.tag-b{background:rgba(13,74,82,0.15);color:#1B6B76;border:1px solid rgba(27,107,118,0.3)}
+.tag-c{background:rgba(255,255,255,0.05);color:rgba(255,255,255,0.45);border:1px solid rgba(255,255,255,0.1)}
+.pattern-name{font-family:'Outfit',sans-serif;font-size:1.15rem;font-weight:700;margin-bottom:6px;letter-spacing:1px}
+.pattern-desc{font-size:0.8rem;color:rgba(255,255,255,0.45);line-height:1.7}
+.pattern-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.chip{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);color:rgba(255,255,255,0.45);font-size:0.7rem;padding:4px 10px;border-radius:3px}
+.open-btn{display:inline-flex;align-items:center;gap:8px;background:#1B6B76;color:#fff;padding:12px 24px;border-radius:6px;font-size:0.82rem;font-weight:600;letter-spacing:0.5px;text-decoration:none;white-space:nowrap;transition:all 0.2s;cursor:pointer;border:none;font-family:'Outfit',sans-serif}
+.open-btn:hover{background:#0D4A52;transform:translateY(-1px)}
+
+.preview-wrap{position:relative;background:#fff}
+.preview-bar{background:#1e2530;padding:10px 16px;display:flex;align-items:center;gap:12px}
+.preview-dots{display:flex;gap:6px}
+.dot{width:10px;height:10px;border-radius:50%}
+.dot-r{background:#ff5f57}
+.dot-y{background:#febc2e}
+.dot-g{background:#28c840}
+.preview-url{flex:1;background:rgba(255,255,255,0.07);border-radius:4px;padding:4px 12px;font-size:0.72rem;color:rgba(255,255,255,0.35);font-family:monospace}
+iframe{width:100%;height:600px;border:none;display:block}
+.preview-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(15,20,25,0.85);backdrop-filter:blur(4px);cursor:pointer;transition:all 0.2s}
+.preview-overlay:hover{background:rgba(15,20,25,0.75)}
+.preview-overlay-inner{text-align:center}
+.preview-overlay-icon{font-size:2.4rem;margin-bottom:12px}
+.preview-overlay-text{font-size:0.85rem;color:rgba(255,255,255,0.6)}
+.preview-overlay-hint{font-size:0.72rem;color:rgba(255,255,255,0.3);margin-top:6px}
+
+.comparison{max-width:1200px;margin:0 auto;padding:0 40px 64px}
+.comparison h2{font-family:'Outfit',sans-serif;font-size:1.1rem;font-weight:700;letter-spacing:2px;margin-bottom:24px;color:rgba(255,255,255,0.6)}
+table{width:100%;border-collapse:collapse;font-size:0.82rem}
+th{padding:12px 16px;background:rgba(255,255,255,0.04);text-align:left;font-size:0.68rem;letter-spacing:2px;color:rgba(255,255,255,0.4);text-transform:uppercase;border-bottom:1px solid rgba(255,255,255,0.08)}
+td{padding:14px 16px;border-bottom:1px solid rgba(255,255,255,0.05);color:rgba(255,255,255,0.65);vertical-align:top;line-height:1.7}
+tr:first-child td:first-child{color:rgba(255,255,255,0.85);font-weight:600}
+td:first-child{color:rgba(255,255,255,0.85);font-weight:500;white-space:nowrap}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="header-badge">MACHIWORK LP デザイン候補</div>
+    <h1>3 PATTERNS</h1>
+    <p class="header-sub">各パターンをクリックしてプレビュー。<br>選定後、Figma → STUDIO実装に移ります。</p>
+  </div>
+</header>
+
+<div class="patterns">
+
+  <!-- PATTERN A -->
+  <div class="pattern-block">
+    <div class="pattern-header">
+      <div class="pattern-meta">
+        <div class="pattern-tag tag-a">Pattern A</div>
+        <div class="pattern-name">複業クラウド系 — 構造化ポータル型</div>
+        <p class="pattern-desc">情報が整理されたプロフェッショナルなポータルスタイル。ダークネイビーヘッダーに teal アクセント。コンセプトを伝えながら、機能・カテゴリも分かりやすく整理。CTAが明確で行動しやすい設計。</p>
+        <div class="pattern-chips">
+          <span class="chip">ダークネイビー × teal</span>
+          <span class="chip">グリッドレイアウト</span>
+          <span class="chip">プロフェッショナル</span>
+          <span class="chip">情報密度：高</span>
+          <span class="chip">ターゲット：事業者寄り</span>
+        </div>
+      </div>
+      <a href="pattern-a.html" target="_blank" class="open-btn">別タブで開く ↗</a>
+    </div>
+    <div class="preview-wrap">
+      <div class="preview-bar">
+        <div class="preview-dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div>
+        <div class="preview-url">pattern-a.html — 複業クラウド系</div>
+      </div>
+      <div class="preview-overlay" onclick="loadIframe(this,'pattern-a.html')">
+        <div class="preview-overlay-inner">
+          <div class="preview-overlay-icon">▶</div>
+          <div class="preview-overlay-text">クリックしてプレビューを読み込む</div>
+          <div class="preview-overlay-hint">または「別タブで開く」で全画面確認</div>
+        </div>
+      </div>
+      <iframe id="iframe-a" style="display:none"></iframe>
+    </div>
+  </div>
+
+  <!-- PATTERN B -->
+  <div class="pattern-block">
+    <div class="pattern-header">
+      <div class="pattern-meta">
+        <div class="pattern-tag tag-b">Pattern B</div>
+        <div class="pattern-name">inadani-sees系 — コミュニティ・アクション型</div>
+        <p class="pattern-desc">「出会う/働く/成長する」の3軸で入口を見せるコミュニティ重視デザイン。ナチュラルグリーン × teal の温かいパレット。人の声を前面に出し、「まず興味ある」から始められる敷居の低い設計。</p>
+        <div class="pattern-chips">
+          <span class="chip">ナチュラルグリーン × teal</span>
+          <span class="chip">3軸アクション</span>
+          <span class="chip">温かみ・親しみやすさ</span>
+          <span class="chip">声・顔セクション</span>
+          <span class="chip">ターゲット：ワーカー寄り</span>
+        </div>
+      </div>
+      <a href="pattern-b.html" target="_blank" class="open-btn">別タブで開く ↗</a>
+    </div>
+    <div class="preview-wrap">
+      <div class="preview-bar">
+        <div class="preview-dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div>
+        <div class="preview-url">pattern-b.html — inadani-sees系</div>
+      </div>
+      <div class="preview-overlay" onclick="loadIframe(this,'pattern-b.html')">
+        <div class="preview-overlay-inner">
+          <div class="preview-overlay-icon">▶</div>
+          <div class="preview-overlay-text">クリックしてプレビューを読み込む</div>
+          <div class="preview-overlay-hint">または「別タブで開く」で全画面確認</div>
+        </div>
+      </div>
+      <iframe id="iframe-b" style="display:none"></iframe>
+    </div>
+  </div>
+
+  <!-- PATTERN C -->
+  <div class="pattern-block">
+    <div class="pattern-header">
+      <div class="pattern-meta">
+        <div class="pattern-tag tag-c">Pattern C</div>
+        <div class="pattern-name">hitomachi系 — エディトリアル・ストーリー型</div>
+        <p class="pattern-desc">人物・事例中心のエディトリアルデザイン。ほぼモノクローム（黒/白）+ teal ポイントカラー。明朝体 × ゴシックの組み合わせで高級感・信頼感を演出。ABOUT→PEOPLE→WORKSの論理的フローで世界観を語る。</p>
+        <div class="pattern-chips">
+          <span class="chip">モノクロ × teal</span>
+          <span class="chip">明朝体エディトリアル</span>
+          <span class="chip">PEOPLE → WORKS フロー</span>
+          <span class="chip">高級感・信頼感</span>
+          <span class="chip">ターゲット：両者バランス</span>
+        </div>
+      </div>
+      <a href="pattern-c.html" target="_blank" class="open-btn">別タブで開く ↗</a>
+    </div>
+    <div class="preview-wrap">
+      <div class="preview-bar">
+        <div class="preview-dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div>
+        <div class="preview-url">pattern-c.html — hitomachi系</div>
+      </div>
+      <div class="preview-overlay" onclick="loadIframe(this,'pattern-c.html')">
+        <div class="preview-overlay-inner">
+          <div class="preview-overlay-icon">▶</div>
+          <div class="preview-overlay-text">クリックしてプレビューを読み込む</div>
+          <div class="preview-overlay-hint">または「別タブで開く」で全画面確認</div>
+        </div>
+      </div>
+      <iframe id="iframe-c" style="display:none"></iframe>
+    </div>
+  </div>
+
+</div>
+
+<!-- COMPARISON TABLE -->
+<div class="comparison">
+  <h2>PATTERN COMPARISON</h2>
+  <table>
+    <tr>
+      <th>項目</th>
+      <th>Pattern A（複業クラウド系）</th>
+      <th>Pattern B（inadani-sees系）</th>
+      <th>Pattern C（hitomachi系）</th>
+    </tr>
+    <tr>
+      <td>ビジュアル方向性</td>
+      <td>プロフェッショナル・構造化</td>
+      <td>温かみ・コミュニティ重視</td>
+      <td>エディトリアル・高品質感</td>
+    </tr>
+    <tr>
+      <td>カラー</td>
+      <td>ダークネイビー + teal</td>
+      <td>ナチュラルグリーン + teal</td>
+      <td>ほぼモノクロ + teal point</td>
+    </tr>
+    <tr>
+      <td>タイポグラフィ</td>
+      <td>Noto Sans JP + Outfit</td>
+      <td>Noto Sans + Noto Serif（混合）</td>
+      <td>Noto Serif JP 主体（明朝）</td>
+    </tr>
+    <tr>
+      <td>主なターゲット感</td>
+      <td>事業者・ビジネス寄り</td>
+      <td>ワーカー・副業層寄り</td>
+      <td>両者バランス型</td>
+    </tr>
+    <tr>
+      <td>情報密度</td>
+      <td>高め（情報整理重視）</td>
+      <td>中（読みやすさ重視）</td>
+      <td>低め（余白・世界観重視）</td>
+    </tr>
+    <tr>
+      <td>セクション数</td>
+      <td>8セクション</td>
+      <td>9セクション（声・顔あり）</td>
+      <td>9セクション（WORKS事例あり）</td>
+    </tr>
+    <tr>
+      <td>向いているケース</td>
+      <td>まず機能・情報で判断したい人向け</td>
+      <td>共感・温かさで引き込みたい場合</td>
+      <td>ブランド・世界観で差別化したい場合</td>
+    </tr>
+  </table>
+</div>
+
+<script>
+function loadIframe(overlay,src){
+  const wrap=overlay.parentElement;
+  const iframe=wrap.querySelector('iframe');
+  iframe.src=src;
+  iframe.style.display='block';
+  overlay.style.display='none';
+}
+</script>
+</body>
+</html>
